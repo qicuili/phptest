@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+  width: 6px;
+  /* background-color: red; */
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* background-color: green; */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #B7B7B7;
+  border-radius: 6px;
+}
+.hide-scrollbar-thumb::-webkit-scrollbar {
+  display: none;
+  /* 隐藏滚动条 */
+}
+p {
+  line-height: 1.5;
+}
+
+/* 分页样式 */
+.pagination {
+  width: 100%;
+}
+
+.page-item {
+  @apply inline-block;
+  @apply px-3;
+  @apply m-0.5;
+  @apply border;
+}
+
+.page-link {
+  @apply text-blue-600;
+  @apply cursor-pointer;
+}
+
+.page-item.disabled .page-link,
+.page-item.active .page-link {
+  @apply text-gray-500;
+  @apply cursor-default;
+}
+.toast {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
